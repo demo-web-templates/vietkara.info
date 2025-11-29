@@ -36,8 +36,9 @@ jobs:
       - name: Build project
         run: npm run build
         env:
+          # Base path cho GitHub Pages subpath
+          BASE_PATH: /vietkara.info/
           # Thêm các env variables cần thiết nếu có
-          # BASE_PATH: /vietkara.info/  # Uncomment nếu dùng subpath
           # GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
 
       - name: Copy .nojekyll to dist
