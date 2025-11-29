@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+@theme {
+  --color-vk-pink: #ff7fa3;
+  --color-vk-dark: #222222;
+  --color-vk-gold: #d4af37;
+  --color-vk-silver: #c0c0c0;
+  --color-vk-bronze: #cd7f32;
+}
+
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  background-color: #f8f8f8;
+}
+
+/* Custom scrollbar for horizontal sections */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
