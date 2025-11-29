@@ -6,8 +6,8 @@ export default defineConfig(({ mode }) => {
     const env = loadEnv(mode, '.', '');
     // Base path cho GitHub Pages: có thể là "/" (custom domain) hoặc "/vietkara.info/" (subpath)
     // Có thể override bằng env variable BASE_PATH
-    // Kiểm tra cả process.env (cho Windows và GitHub Actions)
-    let base = process.env.BASE_PATH || env.BASE_PATH || '/';
+    // Mặc định là /vietkara.info/ vì repo name là vietkara.info
+    let base = env.BASE_PATH || process.env.BASE_PATH || '/vietkara.info/';
     // Đảm bảo base path luôn bắt đầu và kết thúc bằng /
     if (base && base !== '/') {
       if (!base.startsWith('/')) base = '/' + base;
